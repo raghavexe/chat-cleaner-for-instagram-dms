@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68","wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ig-dm-cleaner"
+version = "0.1.0"
+description = "Convert Instagram DM JSON exports into LLM fine-tuning datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["instagram","fine-tuning","nlp","datasets-generator","dataset","llm","JSON"]
+classifier = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.scripts]
+ig-dm-cleaner = "ig_dm_cleaner._cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tools.setuptools.packages-dir]
+"" = "src"
