@@ -112,3 +112,9 @@ Cleaning steps applied to each message:
 - Enforce length bounds (2–1000 chars)
 
 Only `other → me` adjacent pairs within a 12-hour window become training samples.
+
+## Troubleshoot
+
+- Run `pytest` in the root folder
+- Contact me through my [website]("") (_Coming soon_)
+- Create an issue in the repo for time being
