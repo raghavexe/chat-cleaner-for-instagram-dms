@@ -2,6 +2,12 @@
 
 Convert Instagram DM exports into clean JSONL datasets for LLM fine-tuning.
 
+## Prior steps
+
+Look at the [Google Drive Cleaner](https://github.com/raghavexe/google-drive-cleaner-utility-script-for-instagram-JSON-export) repository and add it to [Google App Scripts](https://script.google.com/home) to clean your inbox folder.
+The cleaning process removes Photos, Videos, Audio Messages, Stickers and GIFs
+TL;DR: it removes data that wont be required for the dataset generation steps.
+
 ## Install
 
 ```bash
