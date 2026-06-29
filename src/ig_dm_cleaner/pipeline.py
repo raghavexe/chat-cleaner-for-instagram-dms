@@ -199,3 +199,30 @@ class Pipeline:
     @staticmethod
     def _divider() -> None:
         print("\n" + "-" * 50)
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Instagram DM Cleaner Pipeline")
+    parser.add_argument("--name", required=True, help="Your Instagram display name")
+    parser.add_argument("--inbox", default="./inbox")
+    parser.add_argument("--cleaned", default="./cleaned-text")
+    parser.add_argument("--output", default="./train.jsonl")
+    parser.add_argument("--removed-log", default="./removed_lines.jsonl")
+    parser.add_argument("--time-gap", type=int, default=DEFAULT_TIME_GAP_LIMIT)
+
+    args = parser.parse_args()
+
+    config = PipelineConfig(
+        my_name=args.name,
+        inbox_dir=args.inbox,
+        cleaned_dir=args.cleaned,
+        output_file=args.output,
+        removed_log=args.removed_log,
+        time_gap_limit=args.time_gap,
+    )
+
+    result = Pipeline(config).run()
+
+    print("\n📊 FINAL SUMMARY")
+    print(result)
