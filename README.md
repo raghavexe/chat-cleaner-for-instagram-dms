@@ -39,7 +39,7 @@ your-project/
 ### Full pipeline
 
 ```bash
-ig-dm-cleaner run --name "Your Name" --inbox ./inbox
+ig-dm-cleaner --name "Your Name" --inbox ./inbox
 ```
 
 | Flag             | Default          | Description                     |
